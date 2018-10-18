@@ -11,10 +11,19 @@ public class Doo : EnemyCore
         yMovement = 0f;
         speed = 1f;
         Rb2D();
+
+        //this.originalY = this.transform.position.y;
     }
 
     private void FixedUpdate()
     {
         Move();
     }
+
+    /*private void Update()
+    {
+        transform.position = new Vector3(transform.position.x,
+            originalY + ((float)Mathf.Sin(Time.time) * floatStrength),
+            transform.position.z);
+    }*/
 }
