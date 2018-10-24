@@ -9,7 +9,7 @@ public class StrongEnemy : EnemyCore
         Health = 3;
         xMovement = -5f;
         yMovement = 0f;
-        speed = 1f;
+        speed = 0.4f;
         Rb2D();
     }
 

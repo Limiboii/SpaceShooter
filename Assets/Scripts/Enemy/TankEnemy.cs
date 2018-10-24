@@ -9,7 +9,7 @@ public class TankEnemy : EnemyCore
         Health = 10;
         xMovement = -5f;
         yMovement = 0f;
-        speed = 1f;
+        speed = 0.1f;
         Rb2D();
     }
 

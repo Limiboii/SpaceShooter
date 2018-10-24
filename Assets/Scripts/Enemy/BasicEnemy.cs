@@ -9,7 +9,7 @@ public class BasicEnemy : EnemyCore
         Health = 1;
         xMovement = -5f;
         yMovement = 0f;
-        speed = 1f;
+        speed = 0.7f;
         Rb2D();
     }
 

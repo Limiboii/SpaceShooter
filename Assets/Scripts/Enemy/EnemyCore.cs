@@ -8,6 +8,8 @@ public class EnemyCore : MonoBehaviour
     public int Health;
     public float xMovement;
     public float yMovement;
+    public float floatStrength = 1;
+    public float originalY;
 
     [Range(0f, 20f)]
     public float speed;
@@ -17,7 +19,13 @@ public class EnemyCore : MonoBehaviour
     {
         Health--;
         print("1 Damage Taken");
-    } 
+    }
+
+    public void DodgeMove()
+    {
+        Vector2 movement = new Vector2(xMovement, yMovement * Mathf.Sin(Time.time));
+        rb.velocity = (movement * speed);
+    }
 
     public void Move()
     {
@@ -36,3 +44,4 @@ public class EnemyCore : MonoBehaviour
         Move();
     }*/
 }
+
