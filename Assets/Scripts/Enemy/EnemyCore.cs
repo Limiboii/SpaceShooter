@@ -21,6 +21,12 @@ public class EnemyCore : MonoBehaviour
         print("1 Damage Taken");
     }
 
+    public void DodgeMove()
+    {
+        Vector2 movement = new Vector2(xMovement, yMovement * Mathf.Sin(Time.time));
+        rb.velocity = (movement * speed);
+    }
+
     public void Move()
     {
         Vector2 movement = new Vector2(xMovement, 0);

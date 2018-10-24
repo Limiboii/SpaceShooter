@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DodgingShootingEnemy : EnemyCore
+public class DodgingShootingEnemy : ShootingEnemy
 {
     void Start()
     {
@@ -15,6 +15,6 @@ public class DodgingShootingEnemy : EnemyCore
 
     private void FixedUpdate()
     {
-        Move();
+        DodgeMove();
     }
 }
