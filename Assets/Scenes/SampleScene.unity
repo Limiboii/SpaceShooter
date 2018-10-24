@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &37024688
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477134650032184, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f29e476c0d0bdb940a8b9cd839aed668, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &435553558
 Prefab:
   m_ObjectHideFlags: 0
@@ -203,7 +245,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.8764553
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -333,7 +375,7 @@ SpriteRenderer:
   m_Size: {x: 24.645088, y: 12.767576}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1827461115
@@ -358,7 +400,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4101804250003074, guid: 02fd4735567b342479d9cb030e80510c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.49
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4101804250003074, guid: 02fd4735567b342479d9cb030e80510c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -386,6 +428,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4101804250003074, guid: 02fd4735567b342479d9cb030e80510c, type: 2}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101804250003074, guid: 02fd4735567b342479d9cb030e80510c, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472651607742842, guid: 02fd4735567b342479d9cb030e80510c,
+        type: 2}
+      propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
