@@ -6,15 +6,24 @@ public class TankEnemy : EnemyCore
 {
     void Start()
     {
-        Health = 10;
-        xMovement = -5f;
-        yMovement = 0f;
-        speed = 0.1f;
         Rb2D();
+        gameObject.transform.Rotate(Vector3.forward * -90);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Move();
+        CheckPlayerDead();
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.SendMessageUpwards("Destroy");
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.tag == "Wall")
+            Destroy(gameObject);
     }
 }
