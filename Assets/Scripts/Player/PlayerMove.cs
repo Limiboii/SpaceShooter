@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rb;
-    private float xMovement;
     private float yMovement;
     [Range(0f, 20f)]
     public float speed;
@@ -17,11 +16,11 @@ public class PlayerMove : MonoBehaviour
         rb.gravityScale = 0;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        xMovement = 0f;
+        //Man kan bara åka upp och ner
         yMovement = Input.GetAxis("Vertical");
-        Vector2 movement = new Vector2(xMovement, yMovement);
+        Vector2 movement = new Vector2(0, yMovement);
 
         rb.velocity = (movement * speed);
     }

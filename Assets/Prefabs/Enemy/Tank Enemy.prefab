@@ -99,12 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7bc560cd5114e341afbe759c8bd5631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 15
   pointsWorth: 300
   xMovement: -1
   yMovement: 0
-  floatStrength: 1
-  speed: 2
+  speed: 1.5
 --- !u!212 &212120881149399672
 SpriteRenderer:
   m_ObjectHideFlags: 1

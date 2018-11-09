@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    //Skapar visst en lista som man kan göra hur lång som helst.
     public GameObject[] enemies;
 
     Vector2 spawnPoint;
@@ -16,13 +17,14 @@ public class EnemySpawner : MonoBehaviour
     int difficulty;
     int x = 1;
 
+    //Så stor range de kan spawna på utifrån objektets mitt som scriptet sitter på
     public float randRangeMax = 3;
     public float randRangeMin = -3;
 
     private void Start()
     {
         x = 1;
-        nextSpawn = 3;
+        nextSpawn = 1.625f;
         difficulty = 0;
     }
 
@@ -37,12 +39,14 @@ public class EnemySpawner : MonoBehaviour
             spawnPoint = new Vector2(transform.position.x, rand);
 
             //Väljer en av alla enemies jag lagt in
+            //Jag ville inte ha enemies.length då det skulle komma fler typer desto längre in du kommer. 
             Instantiate(enemies[Random.Range(0, x)], spawnPoint, Quaternion.identity);
         }
 
         if (Score.score >= difficulty && difficulty <= 5000)
         {
-            spawnRate -= 0.25f;
+            //Gör så att fienderna spawnar fler typer snabbare och svårare typer kommer oftare.
+            spawnRate -= 0.125f;
             difficulty += 500;
             if (x < 23)
                 x += 3;

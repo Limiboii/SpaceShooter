@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootingEnemy : EnemyCore
 {
     public  float cooldown;
-
+    //floaten borde var private men den behöver också ärvas till senare.
     [HideInInspector]
     public float pCooldown;
     public GameObject projectile;
@@ -20,6 +20,7 @@ public class ShootingEnemy : EnemyCore
     private void Update()
     {
         Move();
+        //Man ändrar "cooldown" variabeln och så ofta skjuter fienden.
         if (Time.deltaTime != 0)
             if (pCooldown <= 0)
             {
@@ -35,7 +36,7 @@ public class ShootingEnemy : EnemyCore
 
     public void Shoot()
     {
-
+        //Skapar en projectil på firepoint objektet med samma rotation som firepoint.
         Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
     }
 

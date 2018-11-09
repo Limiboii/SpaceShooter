@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int dmg;
     public float bulletSpeed;
     Rigidbody2D rb2d;
 
     private void Start()
     {
-        //Gör så att skottet skjuter åt höger. I detta fallet höger från firepoint vilket är riktat 90 grader.
+        //Gör så att skottet skjuter åt höger. I detta fallet höger från firepoint vilket är riktat 90 grader 
+        //vilket är längs med den röda pilen.
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.velocity = transform.right * bulletSpeed;
         gameObject.transform.Rotate(Vector3.forward * -90f);
@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
 
             DestroyBullet();
         }
+        //Colliders på sidan.
         else if (col.gameObject.tag == "Wall")
             DestroyBullet();
     }

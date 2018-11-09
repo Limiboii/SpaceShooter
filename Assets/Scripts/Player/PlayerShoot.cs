@@ -6,9 +6,8 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     Rigidbody2D rb2D;
-    public float shootRate;
-    public float shootSpeed;
-    private float cooldown = 0.2f;
+    public float shootrate;
+    private float cooldown;
     public GameObject projectile;
     public GameObject firePoint;
 
@@ -23,13 +22,14 @@ public class PlayerShoot : MonoBehaviour
                 if (cooldown <= 0)
                 {
                     Shoot();
-                    cooldown = 0.2f;
+                    cooldown = shootrate;
                 }
 
         if (cooldown > 0)
             cooldown -= Time.deltaTime;
     }
 
+    //Exakt samma som shootingEnemy
     private void Shoot()
     {
         Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);

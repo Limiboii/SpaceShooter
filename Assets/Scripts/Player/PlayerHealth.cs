@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void TakeDmg()
     {
-        health--;
+        health -= 1;
         if (health <= 0)
             Die();
     }

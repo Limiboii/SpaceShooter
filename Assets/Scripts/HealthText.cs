@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthText : MonoBehaviour
 {
     public Text healthLeft;
-
+    
     void Start()
     {
         healthLeft = GetComponent<Text>();

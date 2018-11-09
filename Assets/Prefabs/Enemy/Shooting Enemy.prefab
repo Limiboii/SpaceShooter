@@ -128,13 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf48a0bb5143e146a0d1d18e21ad9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 3
+  Health: 4
   pointsWorth: 100
   xMovement: -1
-  yMovement: 0
-  floatStrength: 1
+  yMovement: 0.5
   speed: 3
-  cooldown: 3
+  cooldown: 2
   pCooldown: 0
   projectile: {fileID: 1468958404199944, guid: 6290a33800b07f549bd3f3fbad74082c, type: 2}
   firePoint: {fileID: 4759939339862330}

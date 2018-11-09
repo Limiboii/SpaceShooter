@@ -17,6 +17,7 @@ public class BasicEnemy : EnemyCore
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        //Om den kolliderar med något förstörs den.
         if (col.gameObject.tag == "Player")
         {
             col.SendMessageUpwards("TakeDmg");
