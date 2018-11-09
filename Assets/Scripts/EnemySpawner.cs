@@ -14,13 +14,21 @@ public class EnemySpawner : MonoBehaviour
     float rand;
     float nextSpawn;
     int difficulty;
+    int x = 1;
 
-    public float randRangeMax = 4;
-    public float randRangeMin = -4;
+    public float randRangeMax = 3;
+    public float randRangeMin = -3;
+
+    private void Start()
+    {
+        x = 1;
+        nextSpawn = 3;
+        difficulty = 0;
+    }
 
     private void Update()
     {
-        if (Time.time > nextSpawn)
+        if (Time.time > nextSpawn && EnemyCore.isPlayerDead != true)
         {
             //ändrar tiden det tar att spawna nya fiender.
             nextSpawn = Time.time + spawnRate;
@@ -29,13 +37,15 @@ public class EnemySpawner : MonoBehaviour
             spawnPoint = new Vector2(transform.position.x, rand);
 
             //Väljer en av alla enemies jag lagt in
-            Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPoint, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, x)], spawnPoint, Quaternion.identity);
         }
 
-        if (GameController.score >= difficulty && difficulty <= 5000)
+        if (Score.score >= difficulty && difficulty <= 5000)
         {
-            spawnRate -= 0.12f;
+            spawnRate -= 0.25f;
             difficulty += 500;
+            if (x < 23)
+                x += 3;
 
         }
     }

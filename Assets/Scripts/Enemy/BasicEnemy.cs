@@ -6,15 +6,23 @@ public class BasicEnemy : EnemyCore
 {
     void Start()
     {
-        Health = 1;
-        xMovement = -5f;
-        yMovement = 0f;
-        speed = 0.7f;
         Rb2D();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Move();
+        CheckPlayerDead();
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.SendMessageUpwards("TakeDmg");
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.tag == "Wall")
+            Destroy(gameObject);
     }
 }
