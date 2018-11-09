@@ -7,8 +7,8 @@ public class EnemyCore : MonoBehaviour
 {
     public int Health, pointsWorth;
     public float xMovement, yMovement;
-    public float floatStrength = 1;
     private float spawnTime;
+    //Checkar bara om spelaren är död.
     public static bool isPlayerDead;
     Rigidbody2D rb;
 
@@ -23,12 +23,12 @@ public class EnemyCore : MonoBehaviour
         if (Health <= 0)
             Die();
     }
-
+    //Gör så att fiender med "Dodge" Pattern börjar på olika punkter i sitt mönster.
     public void DodgeSpawn()
     {
         spawnTime = Time.time - Random.Range(-1, 1);
     }
-
+    //Det som gör att fienden åker i sin vågform.
     public void DodgeMove()
     {
         Vector2 movement = new Vector2(xMovement, yMovement * Mathf.Sin(Time.time - spawnTime));
@@ -52,7 +52,7 @@ public class EnemyCore : MonoBehaviour
         Destroy(gameObject);
         Score.score += pointsWorth;
     }
-
+    //Om playern är död så försvinner alla fiender utan att ge poäng.
     public void CheckPlayerDead()
     {
         if (isPlayerDead)

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Scroller : MonoBehaviour
 {
+    //Bakgrunden som rör sig.
     private float scalar = 1f;
     private Material mat;
     

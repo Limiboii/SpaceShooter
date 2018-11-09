@@ -100,10 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 3
-  pointsWorth: 100
+  pointsWorth: 50
   xMovement: -1
   yMovement: 0.5
-  floatStrength: 1
   speed: 3
 --- !u!212 &212085082752158060
 SpriteRenderer:
