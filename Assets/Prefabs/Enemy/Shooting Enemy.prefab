@@ -132,6 +132,7 @@ MonoBehaviour:
   pointsWorth: 100
   xMovement: -1
   yMovement: 0.5
+  explosion: {fileID: 1757240831223460, guid: 7b446a3f2bd57e64dba7b66d9f77add2, type: 2}
   speed: 3
   cooldown: 2
   pCooldown: 0

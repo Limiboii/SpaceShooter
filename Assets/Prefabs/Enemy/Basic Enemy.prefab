@@ -103,7 +103,7 @@ MonoBehaviour:
   pointsWorth: 20
   xMovement: -1
   yMovement: 0
-  floatStrength: 1
+  explosion: {fileID: 1757240831223460, guid: 7b446a3f2bd57e64dba7b66d9f77add2, type: 2}
   speed: 3
 --- !u!212 &212773794454598456
 SpriteRenderer:
