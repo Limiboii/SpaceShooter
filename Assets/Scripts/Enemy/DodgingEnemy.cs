@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class DodgingEnemy : EnemyCore
 {
-    void Start()
+    protected override void Start()
     {
-        Rb2D();
+        base.Start();
         DodgeSpawn();
-        gameObject.transform.Rotate(Vector3.forward * -90);
     }
 
-    private void Update()
+    protected override void Update()
     {
         DodgeMove();
         CheckPlayerDead();
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            col.SendMessageUpwards("TakeDmg");
-            Destroy(gameObject);
-        }
-        else if (col.gameObject.tag == "Wall")
-            Destroy(gameObject);
     }
 }

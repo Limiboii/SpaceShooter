@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         x = 1;
-        nextSpawn = 1.625f;
+        nextSpawn = 1.5f;
         difficulty = 0;
     }
 
