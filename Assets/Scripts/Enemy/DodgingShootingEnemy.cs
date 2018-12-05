@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DodgingShootingEnemy : DodgingEnemy
+public class DodgingShootingEnemy : ShootingEnemy
 {
+    protected override void Start()
+    {
+        base.Start();
+        DodgeSpawn();
+    }
     protected override void Update()
     {
-        base.Update();
+        DodgeMove();
+        CheckPlayerDead();
         CheckIfShoot();
     }
 }

@@ -6,15 +6,12 @@ using UnityEngine;
 public class EnemyCore : MonoBehaviour
 {
     public int Health, pointsWorth;
-    public float xMovement, yMovement, cooldown;
-    protected float spawnTime, pCooldown;
+    public float xMovement, yMovement;
+    protected float spawnTime;
     //Checkar bara om spelaren är död.
     public static bool isPlayerDead;
     Rigidbody2D rb;
-
-    public GameObject projectile;
-    public Transform firePoint;
-
+    
     [Range(0f, 20f)]
     public float speed;
 
@@ -69,26 +66,7 @@ public class EnemyCore : MonoBehaviour
         if (isPlayerDead)
             Destroy(gameObject);
     }
-
-    protected void CheckIfShoot()
-    {
-        if (Time.deltaTime != 0)
-            if (pCooldown <= 0)
-            {
-                Shoot();
-                pCooldown = cooldown;
-            }
-
-        if (pCooldown > 0)
-            pCooldown -= Time.deltaTime;
-    }
-
-    private void Shoot()
-    {
-        //Skapar en projectil på firepoint objektet med samma rotation som firepoint.
-        Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
-    }
-
+    
     protected virtual void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
